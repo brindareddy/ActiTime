@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.actitime.tests.InValidLoginTest">
+        <methods>
+          <include name="preCondition"/>
+          <include name="testInValidLogin"/>
+          <include name="postCondtion"/>
+        </methods>
+      </class> <!-- com.actitime.tests.InValidLoginTest -->
+      <class name="com.actitime.tests.ValidLoginTest">
+        <methods>
+          <include name="preCondition"/>
+          <include name="testValidLoginLogout"/>
+          <include name="postCondtion"/>
+        </methods>
+      </class> <!-- com.actitime.tests.ValidLoginTest -->
       <class name="com.actitime.tests.VerifyBuildNumberTest">
         <methods>
           <include name="preCondition"/>
@@ -10,6 +24,13 @@
           <include name="testVerifyBuildNumber"/>
         </methods>
       </class> <!-- com.actitime.tests.VerifyBuildNumberTest -->
+      <class name="com.actitime.tests.VerifyVersionTest">
+        <methods>
+          <include name="testVerifyVersion"/>
+          <include name="preCondition"/>
+          <include name="postCondtion"/>
+        </methods>
+      </class> <!-- com.actitime.tests.VerifyVersionTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
